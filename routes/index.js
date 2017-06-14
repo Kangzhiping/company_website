@@ -71,9 +71,4 @@ module.exports = function(app) {
   //用户添加反馈信息
   app.post('/post_feedback', Index.post_feedback);
 
-
-
-
-
-
 };
