@@ -16,20 +16,15 @@
 
 **1、网站效果图：**
 ![网站首页.jpg](./views/show_image1.jpg)
-
-![网站首页.png](http://upload-images.jianshu.io/upload_images/2227968-c210e2991d4f5a56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![前台新闻列表.png](http://upload-images.jianshu.io/upload_images/2227968-a40e971dc06fafe0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![网站首页.jpg](./views/show_image2.jpg)
+![网站首页.jpg](./views/show_image3.jpg)
 
 **2、移动端显示：**   
 
 **3、后台管理系统：**  
 
-![登陆界面.png](http://upload-images.jianshu.io/upload_images/2227968-f8bd6bbe28606a06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![新闻列表.png](http://upload-images.jianshu.io/upload_images/2227968-9a34bbd9523bf7de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![管理员列表.png](http://upload-images.jianshu.io/upload_images/2227968-61eef83a099f30e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![登录.jpg](./views/show_image4.jpg)
+![后台管理.jpg](./views/show_image5.jpg)
 
 
 
@@ -61,8 +56,6 @@
 -  3.2、express项目搭建、数据库设计、路由设计等。
 -  3.3、后台cms设计，UEditor整合express。
 
-![项目工程图.png](http://upload-images.jianshu.io/upload_images/2227968-107ede5900dfb92f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 ##四、网站相关代码说明：
 -  4.1、导航栏选中变色；公共页面并不添加选中效果，在各自页面通过添加class实现选中效果。
 ```
@@ -85,7 +78,7 @@
 #tabContent img{  max-width:90%;}
 ```
 -  4.4、ejs include实现重复代码抽，在页面中引用的时候，include进来就好了，不过要注意相对路径。如下图将网页中的共有的头部和尾部提取出来。
-![include.png](http://upload-images.jianshu.io/upload_images/2227968-598d1c1008fd8e12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ```
 //引入头部：
 <%include ../common/include_header.html%>
@@ -101,7 +94,6 @@
 -  5.1、关于express下图片验证码模块svg-captcha，不过使用前先要安装express-session，因为我们需要使用session存验证码字符串，便于校验。[详细使用介绍在这儿](https://github.com/lemonce/svg-captcha)
 
 -  5.2、验证码模块安装配置好后，在用户登录或者注册的时候。如何实现点击图片验证码刷新呢。
-![验证码示例.png](http://upload-images.jianshu.io/upload_images/2227968-02bfa2fbf3e0108c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```
 //网页中使用图片验证码的地方，有个style设置图片可以点击，同时onclick实现图片验证码点击刷新。
@@ -109,8 +101,6 @@
 ```
 
 -  5.3、当网站有用户提交反馈信息时，工作人员希望在后台可及时收到消息提示信息。想着简单的方法，通过js定时查询数据库，发现有数据更新及时弹窗提醒工作人员。效果如下：
-
-![弹窗消息提醒.png](http://upload-images.jianshu.io/upload_images/2227968-99e18c26845ae39f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```
 //在页面初始化的时候执行，这里设置5秒执行一次。
@@ -162,8 +152,6 @@ app.use(function(req,res,next){
 /require('./routes/admin')(app);
 ```
 -  6.2、时间格式化代码使用moment.js模块。  [官网在这儿](http://momentjs.cn/)  
-
-![moment格式化.png](http://upload-images.jianshu.io/upload_images/2227968-aaf77e905d066351.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ```
 /*引入时间模块*/
 var Moment = require('moment');
@@ -176,8 +164,6 @@ var time=Moment().format('YYYY-MM-DD HH:mm');
 
 ##七、：最后
 项目部署用的是阿里云的windows系统，懒得部署的话直接用在服务器上webstrom启动就是了。
-也可参考我的另外一个博文： [nssm部署node.js项目](https://my.oschina.net/u/2480757/blog/713694)  
 素材来源： [一个神奇的高清图片库](https://unsplash.com/)
- [完整源代码](https://github.com/dpc761218914/company_website)  
 
 所有资料都来自互联网，有冒犯之处请告知。
