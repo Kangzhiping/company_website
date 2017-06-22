@@ -1,7 +1,5 @@
 ##前言：
 
-如果图片加载有问题可直接去博客查看：http://www.jianshu.com/p/b08d6266cbd6
-
 &emsp;&emsp;最近使用node.js开发了一个简单的企业网站。发现node.js中许多现有的模块使用起来确实便捷，再配合前台json交互，网站就很快就开发完成。  
 相关工具：
 - node 4.4.5
@@ -9,23 +7,21 @@
 - Robomongo0.9.0-RC8
 - webstrom11.0.1  
 
-相关环境安装以后，导入工程，npm install，修改配置node.exe路径。应该就能运行成功，欢迎issue。
-关于数据库后台登录时，用户可以先注册一个帐号，然后在数据库修改用户的标志位。就可以登录成功了，标志位分别是0，1，2
+相关环境安装以后，导入工程，npm install。应该就能运行成功，欢迎issue。
+关于数据库后台登录时，用户可以先注册一个帐号，然后在数据库修改用户的标志位。就可以登录成功了，标志位分别是0(客户)，1(普通用户)，2(管理员用户)
 
 —————————————
 先上效果图吧（没有美工，资源就网上搜了）  
 
 
 **1、网站效果图：**
+![网站首页.jpg](./views/show_image1.jpg)
+
 ![网站首页.png](http://upload-images.jianshu.io/upload_images/2227968-c210e2991d4f5a56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![前台新闻列表.png](http://upload-images.jianshu.io/upload_images/2227968-a40e971dc06fafe0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **2、移动端显示：**   
-
-
-![移动端1.png](http://upload-images.jianshu.io/upload_images/2227968-9fdf30b84461969a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![移动端2.png](http://upload-images.jianshu.io/upload_images/2227968-37031613e1ce2bd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **3、后台管理系统：**  
 
