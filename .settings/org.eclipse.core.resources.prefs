@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
 encoding//controller/admin=UTF-8
+encoding//views/admin=UTF-8
+encoding//views/website/index/index.html=UTF-8
+encoding//views/website/news/activity_report_detail.html=UTF-8
+encoding/<project>=UTF-8

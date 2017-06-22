@@ -33,8 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //express中间件顺序要和下面一致
 
 app.use(session({//session持久化配置
-  secret: "jxchexie",
-  key: "jxchexie",
+  secret: "edtdoor",
+  key: "edtdoor",
   cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//超时时间
   saveUninitialized: true,
   resave: false,
@@ -68,12 +68,12 @@ app.get('/captcha', function (req, res) {
   var captcha = svgCaptcha.create({
     size: 4, // 验证码长度
     ignoreChars: '0o1i', // 验证码字符中排除 0o1i
-    noise: 1, // 干扰线条的数量
+    noise: 2, // 干扰线条的数量
     color: true, // 验证码的字符是否有颜色，默认没有，如果设定了背景，则默认有
     background: '#c4c4c5' // background color of the svg image
   });
   //将生成的验证码放在session中
-  req.session.captcha = captcha.text;
+  req.session.captcha = captcha.text.toLowerCase();
   console.log( req.session.captcha);
   res.set('Content-Type', 'image/svg+xml');
   res.status(200).send(captcha.data);

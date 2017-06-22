@@ -46,9 +46,9 @@
 
                             <br>
 
-                           <img src="http://localhost:3000/web/images/man3.jpg" style="float:left; padding-right: 30px;padding-bottom: 30px">
+                           <img src="http://localhost:3000/web/images/mike.png" style="float:left; padding-right: 30px;padding-bottom: 30px">
 
-                            <p>&nbsp;&nbsp;江西省车协汽车服务有限公司的地址在湖坊工业园办公大楼三楼303室，我们主要经营汽车零配件批发、零售；代理机动车登记和相关业务（补发机动车登记证书除外）；汽车租赁；展览展示服务；汽车，总经理吴烈，欢迎您前来参观指导，业务联系电话为18507001113.</p>
+                            <p>&nbsp;&nbsp;深圳市学门网是一家专注做学习方法，学习推荐的，有责任的公司，欢迎您前来参观指导，业务联系电话为18664357232.</p>
                         </div>
 
 
@@ -77,12 +77,6 @@
                         <table class="table table-hover" id="tabContent_recruit">
 
                         </table>
-                        <div class="left wow fadeInDown">
-                            <span style="font-size: large;">离职公示</span><a  href="/quit_notice" class="pull-right a_color margin_right_10">更多</a>
-                        </div>
-                        <br>
-                        <table class="table table-hover" id="tabContent_quit">
-                        </table>
                     </div><!--/.col-md-4-->
                 </div><!--/.services-->
             </div><!--/.row-->
@@ -95,7 +89,7 @@
 	   <div class="container">
             <div class="center wow fadeInDown">
                 <h2>我们的服务</h2>
-                <p class="lead">我们的服务我们的服务我们的服务我们的服务，《详情见江西车协APP或微信公众》</p>
+                <p class="lead">我们的服务《详情见学门网APP或学门网微信公众》</p>
             </div>
 
            <div class="row">
@@ -106,8 +100,8 @@
                            <img class="img-responsive" src="web/images/services/services1.png">
                        </div>
                        <div class="media-body">
-                           <h3 class="media-heading">车务代办</h3>
-                           <p>任何车务都可解决···任何车务都可解决···</p>
+                           <h3 class="media-heading">性格测试</h3>
+                           <p>了解您自己，通过大学专业的测试发现自己</p>
                        </div>
                    </div>
                </div>
@@ -118,8 +112,8 @@
                            <img class="img-responsive" src="web/images/services/services2.png">
                        </div>
                        <div class="media-body">
-                           <h3 class="media-heading">车险</h3>
-                           <p>在这儿享受最彻底的优惠···最彻底的优惠···</p>
+                           <h3 class="media-heading">大学专业推荐</h3>
+                           <p>大学专业的性格测试推荐最适合您的大学专业</p>
                        </div>
                    </div>
                </div>
@@ -130,8 +124,8 @@
                            <img class="img-responsive" src="web/images/services/services3.png">
                        </div>
                        <div class="media-body">
-                           <h3 class="media-heading">车品商城</h3>
-                           <p>低价高品的车友商城···低价高品的车友商城···</p>
+                           <h3 class="media-heading">大学专业介绍</h3>
+                           <p>大学相关专业介绍，让您更了解它！</p>
                        </div>
                    </div>
                </div>
@@ -142,8 +136,8 @@
                            <img class="img-responsive" src="web/images/services/services4.png">
                        </div>
                        <div class="media-body">
-                           <h3 class="media-heading">会员活动</h3>
-                           <p>我们的会员，享受尊贵服务··尊贵服务···</p>
+                           <h3 class="media-heading">学习方法介绍</h3>
+                           <p>专业的学习方法，让您少走弯路。</p>
                        </div>
                    </div>
                </div>
@@ -154,8 +148,8 @@
                            <img class="img-responsive" src="web/images/services/services5.png">
                        </div>
                        <div class="media-body">
-                           <h3 class="media-heading">违章代缴</h3>
-                           <p>违章不用操心费神，找车协··操心费神，找车协···</p>
+                           <h3 class="media-heading">学习方法分享</h3>
+                           <p>分享您的学习方法，让别人少走弯路</p>
                        </div>
                    </div>
                </div>
@@ -166,8 +160,8 @@
                            <img class="img-responsive" src="web/images/services/services6.png">
                        </div>
                        <div class="media-body">
-                           <h3 class="media-heading">二手车</h3>
-                           <p>车友内部高性价比二手车，棒棒的···</p>
+                           <h3 class="media-heading">寻找课程</h3>
+                           <p>寻找想学的专业课程···</p>
                        </div>
                    </div>
                </div>
@@ -250,26 +244,6 @@
                 $("#tabContent_recruit").html(tabContent);
             });
         };
-
-        //从后台获取数据函数，获取离职公示信息
-        function getQuits(){
-            $.get("web/get_quits",function(result){
-                //拼接html内容
-                var tabContent="";
-                //获取后台json数据
-                var mydata=result.datas;
-                for(var i=0;i<mydata.length;i++){
-                    var tempStr='<tr id='+mydata[i]._id+'>'+
-                                /*序号分页后也必须得变动,每页十条数据*/
-                            '<td>'+(i+1)+'、姓名：'+mydata[i].name+'<span class="pull-right">'+mydata[i].department+'</span></td>'+
-                            '</tr>'
-                    tabContent=tabContent+tempStr;
-                }
-                //将拼接好的数据填入#tabContent中
-                $("#tabContent_quit").html(tabContent);
-            });
-        };
-
     });
 
 

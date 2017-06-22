@@ -4,7 +4,6 @@
 // index page
 
 var mongoose=require('mongoose');
-
 var News =mongoose.model('News');
 var Recruit =mongoose.model('Recruit');
 var Quit =mongoose.model('Quit');
@@ -12,10 +11,13 @@ var User=mongoose.model('User');
 var Feedback=mongoose.model('Feedback');
 
 // 首页
+
 exports.admin = function(req, res) {
-    var isSuper='普通管理员'
-    if(req.session.user.status==='2'){
-        isSuper='超级管理员'
+    var isSuper='星级用户';
+    if (req.session.user.status==='1'){
+        isSuper='普通管理员';
+    } else if(req.session.user.status==='2'){
+        isSuper='超级管理员';
     }
     res.render('admin/index',{username:req.session.user.username,isSuper:isSuper});
 };
@@ -249,7 +251,7 @@ exports.register = function(req, res) {
 exports.checkUser = function(req, res) {
     var username=req.body.username;
     var password=req.body.password;
-    var captcha=req.body.captcha;
+    var captcha=req.body.captcha.toLowerCase();
 
     if(captcha!=req.session.captcha){
         console.log('captcha error');
@@ -263,10 +265,10 @@ exports.checkUser = function(req, res) {
             else if(doc==null){
                 console.log('not exist');
                 res.json({'status':'not exist'});
-            }else if(doc.status==='0'){
-                //如果是刚注册的用户，还未授权无法登陆。
-                console.log('unchecked');
-                res.json({'status':'unchecked'});
+//            }else if(doc.status==='0'){
+//               //如果是刚注册的用户，还未授权无法登陆。
+//                console.log('unchecked');
+//                res.json({'status':'unchecked'});
             }else if(doc.password===password){
                 console.log('success');
                 //登录成功，将user保存到session中
