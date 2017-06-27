@@ -321,7 +321,9 @@ exports.post_register = function(req, res) {
                         res.json({'status':'error'});
                     }
                     res.json({'status':'success'});
+                    console.log('succ register!');
                 });
+          
             }
         });
     }

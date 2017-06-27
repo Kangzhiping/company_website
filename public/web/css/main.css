@@ -1,4 +1,4 @@
-
+﻿
 
 
 /*************************
@@ -2561,9 +2561,30 @@ shortcodes page css
   text-align: center;
 }
 
+        .slogan {
+            width: 600px;
+            height: 130px;
+            background: url(/web/firstpage/firstimage1.gif) no-repeat 0 0; 
+            display: inline-block;
+            background-size: 600px;
+        }
 
+        .wrap {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
 
-
-
+        .header {
+            position: fixed;
+            width: 100%;
+            left: 0px;
+            z-index: 999;
+            background-color: #FF5809;
+            font-family: verdana;
+        }
 
 

@@ -1,0 +1,510 @@
+<!-- EdtDoorÑ§ÃÅÍø ÍøÕ¾Ê×Ò³-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="baidu-site-verification" content="OyUb4RVdSe" />
+    <meta name="renderer" content="webkit" />
+  
+    <title>EdtDoor学门</title>
+    <meta name="keywords" content="Ñ§ÃÅÍø/EdtDoor">
+    <meta name="description" content="×ö×îºÃµÄÑ§Ï°ÍøÕ¾£¬±ÈÄã¸ü¶®Äã£¡">
+ 	<link rel="icon" type="image/x-icon">
+    <link rel="alternate" media="only screen and(max-width: 640px)" href="https://ds.alipay.com/" />
+    <!--[if lte IE 7]>
+    <script type="text/javascript">
+        window.location.href = 'https://www.alipay.com/x/kill-ie.htm';
+    </script>
+    <![endif]-->
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        em, i {
+            font-style: normal;
+        }
+
+        img {
+            border: none;
+        }
+
+        input, img {
+            vertical-align: middle;
+        }
+
+        body {
+            background: #fff;
+            color: #666;
+            font-size: 14px;
+            font-family: arial;
+        }
+
+        a {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        html, body {
+            background: #f9f9f9;
+            width: 100%;
+            height: 100%;
+            font-family: Helvetica, sans-serif;
+            -webkit-text-size-adjust: none;
+        }
+
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        textarea.fixAndroidKeyboard:focus, input.fixAKeyboard:focus {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            -webkit-user-modify: read-write-plaintext-only;
+        }
+
+        .noscroll {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .app-dom {
+            width: 100%;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: '';
+            clear: both;
+            visibility: hidden;
+        }
+    </style>
+
+    
+
+    <style>
+        /*@font-face {*/
+        /*font-family: 'iconfont';*/
+        /*src: url('//at.alicdn.com/t/font_1436009778_9049127.eot'); /!* IE9*!/*/
+        /*src: url('//at.alicdn.com/t/font_1436009778_9049127.eot?#iefix') format('embedded-opentype'), /!* IE6-IE8 *!/ url('//at.alicdn.com/t/font_1436009778_9049127.woff') format('woff'), /!* chrome¡¢firefox *!/ url('//at.alicdn.com/t/font_1436009778_9049127.ttf') format('truetype'), /!* chrome¡¢firefox¡¢opera¡¢Safari, Android, iOS 4.2+*!/ url('//at.alicdn.com/t/font_1436009778_9049127.svg#iconfont') format('svg'); /!* iOS 4.1- *!/*/
+        /*}*/
+
+        /*.iconfont {*/
+        /*font-family: "iconfont" !important;*/
+        /*font-size: 32px;*/
+        /*font-style: normal;*/
+        /*-webkit-font-smoothing: antialiased;*/
+        /*-webkit-text-stroke-width: 0.2px;*/
+        /*-moz-osx-font-smoothing: grayscale;*/
+        /*}*/
+
+        body {
+            position: relative;
+            padding-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            left: 0px;
+            z-index: 999;
+            background-color: #FF5809;
+            font-family: verdana;
+        }
+
+        .nav {
+            width: 80%;
+            height: 60px;
+            line-height: 30px;
+            margin: 0 auto 0;
+        }
+
+        .logo {
+            float: left;
+            background-image:url(1495031164_405281.gif);
+            display: inline-block;
+            width: 120px;
+            height:55px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 500px;
+            margin-top: 10px;
+        }   
+
+        .MainList{
+            display: block;
+            width: 500px;
+            height: 6%;
+            float: left;
+            margin-top: 10px;
+        } 
+
+        .MainListBtn{
+            margin: 0;
+            width: 65px;
+            height: 30px;
+            float: left;
+            font-size: 15px;
+            color: #FF0;
+            list-style: none;
+
+        }     
+
+        .entry {
+            float: right;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .entry .state {
+            color: #bfbfbf;
+        }
+
+        .entry a {
+            font-size: 12px;
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        .entry a:hover {
+            color: #00bbee;
+        }
+
+        .container {
+            width: 100%; /*-´ó¿ò¼ÜµÄÑÕÉ«-*/
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .wrap {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+		
+        .mid {
+            width: 100%;
+        }
+
+        .main-entry {
+            width: 1200px;
+            height: 1200px;
+            margin: 0 auto 0;
+        }
+
+        .sub-title {
+            width: 400px;
+            height: 100px;
+            font-size: 40px;
+            color: black;
+            margin: 20px auto;
+        }
+
+        .content-box {
+            width: 1000px;
+            height: 400px;
+            margin: 0 auto 0;
+        }
+
+        .content-box-detail {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            border-color: 2px solid #E0E0E0;
+            width: 400px;
+            height: 200px;
+            font-size: 20px;
+            font-family: tahoma,arial,"Hiragino Sans GB","Microsoft Yahei";
+            float: left;
+        }
+
+        .slogan {
+            width: 600px;
+            height: 350px;
+            background: url(test.gif) no-repeat 0 0; 
+            display: inline-block;
+            background-size: 600px;
+        }
+
+        /*slide*/
+        .front, .items, .item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .back {
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+	        height:500px;
+            overflow: hidden;
+        }
+
+        .item {
+            background: #fff none no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            display: none;
+        }
+
+		
+	   .btn_login {
+            display: inline-block;
+            width: 100px;
+            height: 34px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-left: 10px;
+            border: 1px solid transparent;
+	        box-sizing: border-box
+	        float: right;
+	        background-color: white;
+        }
+		
+	   .btn_main {
+	        display: block;
+            text-decoration: none;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 8px; /* -- ¿ò¿òµÄÔ²½Ç´óÐ¡ */
+	        border-color: 2px solid white;
+            font-size: 15px;  /* -- ¡°¸ßÈýÑ§Éú¡±µÄ×ÖÌå´óÐ¡ */
+            letter-spacing: 1px;
+            height: 150px;
+            width: 150px;    /*À¶É«¿ò¿òµÄ¿í*/
+            color: #ffffff; /*×ÖÌåµÄÑÕÉ« ¸ßÈýÑ§Éú*/
+            position: relative;
+            overflow: hidden;
+	        background-color: transparent;
+	        margin:  0 auto 0;
+        }
+    </style>
+    
+ 	
+    <!--[if lte IE 8]>
+    <style>
+        .slogan, .main-entry a .title i, .logo {
+            background-image: none !important;
+        }
+        .slogan {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://img.alicdn.com/tps/TB1POhqIFXXXXXbXFXXXXXXXXXX.png", sizingMethod="scale");
+        }
+
+        .main-entry a .title i {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://img.alicdn.com/tps/TB1uh30IpXXXXXKXVXXXXXXXXXX.png", sizingMethod="scale");
+        }
+
+        .main-entry a .title .seller {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://img.alicdn.com/tps/TB12JNkIFXXXXXBXXXXXXXXXXXX.png", sizingMethod="scale");
+        }
+
+        .logo {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://img.alicdn.com/tps/TB17ghmIFXXXXXAXFXXXXXXXXXX.png", sizingMethod="scale");
+        }
+
+        .item1 {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg", sizingMethod="scale");
+        }
+
+        .item2 {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://img.alicdn.com/tps/TB1pfG4IFXXXXc6XXXXXXXXXXXX.jpg", sizingMethod="scale");
+        }
+
+        .item3 {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://img.alicdn.com/tps/TB1sXGYIFXXXXc5XpXXXXXXXXXX.jpg", sizingMethod="scale");
+        }
+    </style>
+    <![endif]-->
+	
+</head>
+<body>
+<div >
+    <div class="header">
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="MainList">
+                    <button class ="btn_login" onClick = "" style="background-color: transparent; color: white; font-size: 15px">高考专业推荐</button>
+                    <button class ="btn_login" onClick = "" style="background-color: transparent; color: white; font-size: 15px">高校专业查询</button>
+                    <button class ="btn_login" onClick = "" style="background-color: transparent; color: white; font-size: 15px">心理偏向测试</button>
+                    <button class ="btn_login" onClick = "" style="background-color: transparent; color: white; font-size: 15px">在线教育</button>
+            </div>
+            <div class="entry" >  
+               <button class ="btn_login" onClick = "" style="background-color: transparent; color: white; font-size: 12px">退出当前账户</button>
+            </div>
+        </div> 
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="wrap">
+                <div class="slogan"></div>
+                <div class="mid">
+                    <div class="main-entry">
+                        <div class="sub-title">
+                            <a>个性化的精准专业推荐</a>
+                        </div>
+                        <div class="content-box">
+                            <div class="content-box-detail" style="background-color: #E0E0E0">
+                                <a>心理偏向测试</a>
+                            </div>
+
+                            <div class="content-box-detail" style="width: 200px; margin-top: 70px; font-size: 40px">
+                                <a>+</a>
+                            </div>
+
+                            <div class="content-box-detail" style="background-color: #E0E0E0">
+                                <a>智能数据分析</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <!-- ±³¾°Í¼Æ¬ -->
+            <div class="items">
+                <div class="item item1"
+                     style="background-image:url(313314.jpg)"></div>
+
+            </div>
+          	
+        </div>
+    </div>
+</div>
+<script src="https://t.alipayobjects.com/images/rmsweb/T19ctgXcRlXXXXXXXX.js"></script>
+<script>
+
+    var slideEle = slider($('.items'));
+
+    function slider(elem) {
+        var items = elem.children(),
+                max = items.length - 1,
+                animating = false,
+                currentElem,
+                nextElem,
+                pos = 0;
+
+        sync();
+
+        return {
+            next: function () {
+                move(1);
+            },
+            prev: function () {
+                move(-1);
+            },
+            itemsNum: items && items.length
+        };
+
+        function move(dir) {
+            if (animating) {
+                return;
+            }
+            if (dir > 0 && pos == max || dir < 0 && pos == 0) {
+                if (dir > 0) {
+                    nextElem = elem.children('div').first().remove();
+                    nextElem.hide();
+                    elem.append(nextElem);
+                } else {
+                    nextElem = elem.children('div').last().remove();
+                    nextElem.hide();
+                    elem.prepend(nextElem);
+                }
+                pos -= dir;
+                sync();
+            }
+            animating = true;
+            items = elem.children();
+            currentElem = items[pos + dir];
+            $(currentElem).fadeIn(400, function () {
+                pos += dir;
+                animating = false;
+            });
+        }
+
+        function sync() {
+            items = elem.children();
+            for (var i = 0; i < items.length; ++i) {
+                items[i].style.display = i == pos ? 'block' : '';
+            }
+        }
+
+    }
+
+    if (slideEle.itemsNum && slideEle.itemsNum > 1) {
+        setInterval(function () {
+            slideEle.next();
+        }, 4000)
+    }
+
+
+</script>
+<script>
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+	
+    //cookie¼ÇÂ¼¸öÈËµÇÂ¼±ê¼ÇÎª1,ÉÌ¼ÒµÇÂ¼±ê¼ÇÎª2
+    $(".personal-login").click(function () {
+        setCookie("_n_h_n_option", "1", 365);
+        location.href = "https://www.alipay.com";
+    });
+
+    $(".seller-login").click(function (e) {
+        var target = $(e.target);
+        if (target.hasClass('alipay')) {
+            location.href = "https://b.alipay.com/?ynsrc=zhuzhanA";
+        } else if (target.hasClass('koubei')) {
+            location.href = "https://e.alipay.com/index.htm?from=zhuzhan20160927";
+        }
+    });
+    $(".developer-login").click(function () {
+        location.href = "https://open.alipay.com/platform/home.htm?from=zhuzhan20160818";
+    });
+	
+
+</script>
+</body>
+</html><!-- FD:83:homeproxy/home/startup.vm:634:startup.schema:startup-Í·²¿Ò³ÃæÃèÊö:END --><!-- FD:83:homeproxy/home/startup.vm:END -->
+

@@ -60,7 +60,7 @@
 -  4.1、导航栏选中变色；公共页面并不添加选中效果，在各自页面通过添加class实现选中效果。
 ```
 //include_header.html包含所有的li链接。
-  <li  id="main"><a href="/">首页</a></li>
+  <li  id="main"><a href="/first">首页</a></li>
 //index.html页面初始化时执行
   $("#main").addClass("active");
 ```

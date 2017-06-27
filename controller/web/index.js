@@ -15,7 +15,13 @@ var Moment = require('moment');
 exports.index = function(req, res) {
     res.render('website/index/index');
 };
-// 走进车协
+
+//主页
+exports.first = function(req, res) {
+    res.render('website/index/first');
+};
+
+// 走进学门网
 exports.company_intro = function(req, res) {
     res.render('website/company/company_intro');
 };
@@ -98,26 +104,6 @@ exports.get_news= function(req, res) {
 exports.get_recruits= function(req, res) {
     //获取招聘处理逻辑
     Recruit.find({}).sort('-_id').limit(3).exec(function(err,datas){
-        if(err){
-            console.log('获取数据失败');
-            var data={
-                status: 'failed',
-            };
-            res.json(data);
-        }else{
-            var data={
-                status: 'success',
-                datas: datas
-            };
-            res.json(data);
-        }
-    });
-};
-
-// 首页获取2条离职公告
-exports.get_quits= function(req, res) {
-    //获取招聘处理逻辑
-    Quit.find({}).sort('-_id').limit(2).exec(function(err,datas){
         if(err){
             console.log('获取数据失败');
             var data={

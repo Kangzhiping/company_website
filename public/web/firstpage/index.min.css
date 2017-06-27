@@ -1,0 +1,305 @@
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        em, i {
+            font-style: normal;
+        }
+
+        img {
+            border: none;
+        }
+
+        input, img {
+            vertical-align: middle;
+        }
+
+        body {
+            background: #fff;
+            color: #666;
+            font-size: 14px;
+            font-family: arial;
+        }
+
+        a {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        html, body {
+            background: #f9f9f9;
+            width: 100%;
+            height: 100%;
+            font-family: Helvetica, sans-serif;
+            -webkit-text-size-adjust: none;
+        }
+
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        textarea.fixAndroidKeyboard:focus, input.fixAKeyboard:focus {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            -webkit-user-modify: read-write-plaintext-only;
+        }
+
+        .noscroll {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .app-dom {
+            width: 100%;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: '';
+            clear: both;
+            visibility: hidden;
+        }
+    </style>
+
+    
+
+    <style>
+
+        body {
+            font: 12px/1.5 "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \5b8b\4f53;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 20px;
+            left: 0px;
+            z-index: 999;
+        }
+
+        .nav {
+            width: 80%;
+            height: 70px;
+            line-height: 50px;
+            margin: 0 auto 0;
+        }
+
+
+        .logo {
+            float: left;
+            background-image:url(/web/firstpage/logo.gif);
+            display: inline-block;
+            width: 300px;
+            height:70px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 500px;
+        }       
+
+        .MainList{
+            display: block;
+            width: 600px;
+            height: 50%;
+            margin: auto;
+            float: left;
+        } 
+
+        .MainListBtn{
+            margin: 0;
+            width: 65px;
+            height: 30px;
+            float: left;
+            font-size: 15px;
+            color: #FF0;
+            list-style: none;
+
+        } 
+
+        .entry {
+            float: right;
+            color: #fff;
+            width: 200px;
+            height: 40px;
+        }
+
+        .entry .state {
+            color: #bfbfbf;
+        }
+
+        .entry a {
+            font-size: 12px;
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        .entry a:hover {
+            color: #00bbee;
+        }
+        
+        .btn_form {
+        	float: right;
+            color: #fff;
+            width: 100px;
+            height: 36px;
+        }
+
+        .container {
+            width: 100%; 
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .wrap {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+		
+        .mid {
+            width: 100%;
+        }
+
+        .main-entry {
+            width: 600px;
+            height: 220px;
+            margin: 0 auto 0;
+        }
+        
+        .btn_form1 {
+        	float: right;
+            color: #fff;
+            width: 250px;
+            height: 100px;
+        }
+
+        .slogan {
+            width: 600px;
+            height: 130px;
+            background: url(/web/firstpage/firstimage1.gif) no-repeat 0 0; 
+            display: inline-block;
+            background-size: 600px;
+        }
+
+        /*slide*/
+        .front, .items, .item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .back {
+            bottom: 70px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+	    	height:100%;
+            overflow: hidden;
+        }
+
+        .item {
+            background: #fff none no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            display: none;
+        }
+
+		
+	   .btn_login {
+            display: inline-block;
+            width: 65px;
+            height: 34px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-left: 10px;
+            border: 1px solid white;
+	        box-sizing: border-box
+	        float: right;
+	        background-color: transparent; 
+	        border-color: white; 
+	        color: white;
+        }
+		
+	   .btn_main {
+	        display: block;
+            text-decoration: none;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 8px; 
+	        border-color: 2px solid white;
+            font-size: 22px;  
+            letter-spacing: 1px;
+            height: 90px;
+            width: 180px;    
+            color: #ffffff; 
+            position: relative;
+            overflow: hidden;
+	        background-color: transparent;
+	        margin:  0 auto 0;
+        }
+        
+       .footer {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 25px;
+            background-color: transparent;
+            z-index: 99;
+        }
+        
+       .nav-links {
+            width: 99%;
+            height: 20px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+       .ownership {
+            text-align: center;
+            height: 20px;
+            line-height: 25px;
+        }
+    </style>
+    
+  

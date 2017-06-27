@@ -1,250 +1,86 @@
-<%include ../common/include_header.html%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+  
+    <title>EdtDoor首页</title>
+    <meta name="keywords" content="学门网/EdtDoor">
+    <meta name="description" content="一家有责任的在线教育公司">
+ 	
+ 	<link href="/web/firstpage/index.min.css" rel="stylesheet">
+ 	<script src="/web/firstpage/buttonmove.js"></script>
+  
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <div class="nav">
+            <div class="logo"></div>
+            <ul class="MainList">
+                <li class="MainListBtn" style="margin-left:60%; color:#FFFFFF">
+                    <a href="/first">首页</a>
+                </li>
 
-    <!-- about us slider -->
-    <div id="about-slider">
-        <div id="carousel-slider" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators visible-xs">
-                <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-slider" data-slide-to="1"></li>
-                <li data-target="#carousel-slider" data-slide-to="2"></li>
-            </ol>
+                <li class="MainListBtn">
+                    <a href="/contact_us">联系我们</a>
+                </li>
 
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="/web/images/index3.jpg" class="img-responsive" alt="" style="min-height: 200px">
-                </div>
-                <div class="item">
-                    <img src="/web/images/index4.jpg" class="img-responsive" alt="" style="min-height: 200px">
-                </div>
-                <div class="item">
-                    <img src="/web/images/index5.jpg" class="img-responsive" alt="" style="min-height: 200px">
-                </div>
+                <li class="MainListBtn" style="margin-left:30px">
+                    <a href="/company_intro">关于我们</a>
+                </li>
+            </ul>
+            <div class="entry">
+            	<form action="/login" method="get" class="btn_form">  
+            		<button class ="btn_login" onmouseover="mover1(this)" onmouseout="mout1(this)">登录</button>
+            	</form> 
+            	<form action="/register" method="get" class="btn_form">  
+                	<button class ="btn_login" onmouseover="mover1(this)" onmouseout="mout1(this)">注册</button>
+                </form>
             </div>
-
-            <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
-                <i class="fa fa-angle-left"></i>
-            </a>
-
-            <a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        </div> <!--/#carousel-slider-->
-    </div><!--/#about-slider-->
-
-
-    <section id="feature" >
-        <div class="container">
-            <div class="row">
-                <div class="features">
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
-
-                        <div class="left wow fadeInDown">
-                            <span style="font-size: large;">公司简介</span><a href="/company_intro" class="pull-right a_color margin_right_10">更多</a>
-                        </div>
-                        <div class="feature-wrap">
-
-                            <br>
-
-                           <img src="/web/images/mike.png" style="float:left; padding-right: 30px;padding-bottom: 30px">
-
-                            <p>&nbsp;&nbsp;深圳市学门网是一家专注做学习方法，学习推荐的，有责任的公司，欢迎您前来参观指导，业务联系电话为18664357232.</p>
-                        </div>
-
-
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
-
-                        <div class="left wow fadeInDown">
-                            <span style="font-size: large;">公司新闻</span><a href="/company_dynamic" class="pull-right a_color margin_right_10">更多</a>
-                        </div>
-                        <br>
-
-                        <table class="table table-hover" id="tabContent">
-
-                        </table>
-
-
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
-
-                        <div class="left wow fadeInDown">
-                            <span style="font-size: large;">人力资源</span><a href="/recruit" class="pull-right a_color margin_right_10">更多</a>
-                        </div>
-                        <br>
-                        <table class="table table-hover" id="tabContent_recruit">
-
-                        </table>
-                    </div><!--/.col-md-4-->
-                </div><!--/.services-->
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#feature-->
-
-
-
-    <section id="services" class="service-item">
-	   <div class="container">
-            <div class="center wow fadeInDown">
-                <h2>我们的服务</h2>
-                <p class="lead">我们的服务《详情见学门网APP或学门网微信公众》</p>
-            </div>
-
-           <div class="row">
-
-               <div class="col-sm-6 col-md-4">
-                   <div class="media services-wrap wow fadeInDown">
-                       <div class="pull-left">
-                           <img class="img-responsive" src="web/images/services/services1.png">
-                       </div>
-                       <div class="media-body">
-                           <h3 class="media-heading">性格测试</h3>
-                           <p>了解您自己，通过大学专业的测试发现自己</p>
-                       </div>
-                   </div>
-               </div>
-
-               <div class="col-sm-6 col-md-4">
-                   <div class="media services-wrap wow fadeInDown">
-                       <div class="pull-left">
-                           <img class="img-responsive" src="web/images/services/services2.png">
-                       </div>
-                       <div class="media-body">
-                           <h3 class="media-heading">大学专业推荐</h3>
-                           <p>大学专业的性格测试推荐最适合您的大学专业</p>
-                       </div>
-                   </div>
-               </div>
-
-               <div class="col-sm-6 col-md-4">
-                   <div class="media services-wrap wow fadeInDown">
-                       <div class="pull-left">
-                           <img class="img-responsive" src="web/images/services/services3.png">
-                       </div>
-                       <div class="media-body">
-                           <h3 class="media-heading">大学专业介绍</h3>
-                           <p>大学相关专业介绍，让您更了解它！</p>
-                       </div>
-                   </div>
-               </div>
-
-               <div class="col-sm-6 col-md-4">
-                   <div class="media services-wrap wow fadeInDown">
-                       <div class="pull-left">
-                           <img class="img-responsive" src="web/images/services/services4.png">
-                       </div>
-                       <div class="media-body">
-                           <h3 class="media-heading">学习方法介绍</h3>
-                           <p>专业的学习方法，让您少走弯路。</p>
-                       </div>
-                   </div>
-               </div>
-
-               <div class="col-sm-6 col-md-4">
-                   <div class="media services-wrap wow fadeInDown">
-                       <div class="pull-left">
-                           <img class="img-responsive" src="web/images/services/services5.png">
-                       </div>
-                       <div class="media-body">
-                           <h3 class="media-heading">学习方法分享</h3>
-                           <p>分享您的学习方法，让别人少走弯路</p>
-                       </div>
-                   </div>
-               </div>
-
-               <div class="col-sm-6 col-md-4">
-                   <div class="media services-wrap wow fadeInDown">
-                       <div class="pull-left">
-                           <img class="img-responsive" src="web/images/services/services6.png">
-                       </div>
-                       <div class="media-body">
-                           <h3 class="media-heading">寻找课程</h3>
-                           <p>寻找想学的专业课程···</p>
-                       </div>
-                   </div>
-               </div>
-           </div><!--/.row-->
-
-        </div><!--/.container-->
-    </section><!--/#services-->
-
-
-
-    <section id="conatcat-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
-                        <div class="pull-left">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="media-body">
-                            <h2>有任何问题?</h2>
-                            <p>请拨打12345678或者在留言板留言，工作人员会尽快和你取得联系！</p>
-                        </div>
+        </div> 
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="wrap">
+                <div class="slogan"></div>
+                <div class="mid">
+                    <div class="main-entry">
+                    	<form action="/services2" method="get" class="btn_form1">  
+                       		<button class="btn_main" onmouseover="mover2(this)" onmouseout="mout2(this)">高考专业推荐</button>
+                       	</form>
+                       	<form action="/services3" method="get" class="btn_form1">  
+		               		<button class="btn_main" onmouseover="mover2(this)" onmouseout="mout2(this)">高校专业查询</button>
+                       	</form>
+                       	<form action="/services1" method="get" class="btn_form1">  
+                       		<button class="btn_main" onmouseover="mover2(this)" onmouseout="mout2(this)">心理偏向测试</button>
+                       	</form>
+                       	<form action="/services4" method="get" class="btn_form1">  
+                       		<button class="btn_main" onmouseover="mover2(this)" onmouseout="mout2(this)">在线教育</button>
+                    	</form>
                     </div>
                 </div>
             </div>
-        </div><!--/.container-->    
-    </section><!--/#conatcat-info-->
+        </div>
+        <div class="back">
+            <div class="items">
+                <div class="item"
+                     style="background-image:url(/web/firstpage/backgroundimage1.jpg)"></div>
+				<div class="item"
+                     style="background-image:url(/web/firstpage/backgroundimage2.jpg)"></div>
+                <div class="item"
+                     style="background-image:url(/web/firstpage/backgroundimage3.jpg)"></div>	
+            </div>
+        </div>
+    </div>
+	<div class="footer">
+        <div class="ownership">
+            <span>Copyright &copy; 2017.版权所有：学门网 深ICP备88888888号</span>
+        </div>
+    </div>
+</div>
+<script src="/web/firstpage/firstpage.js"></script>
+<script src="/web/firstpage/changeimages.js"></script>
 
-<%include ../common/include_footer.html%>
-<script type="text/javascript" src="/web/layui/layui.js"></script>
-<!--jquery修改首页导航样式-->
-<script>
-    //一般直接写在一个js文件中
-    layui.use(['layer', 'form'], function(){
-        var layer = layui.layer
-                , $ = layui.jquery;
-
-        //页面初始化的时候执行
-        $(function (){
-            $("#main").addClass("active");
-            getNews();
-            getRecruits();
-            getQuits();
-        });
-
-        //从后台获取数据函数，获取6条新闻数据
-        function getNews(){
-            $.get("web/get_news",function(result){
-                //拼接html内容
-                var tabContent="";
-                //获取后台json数据
-                var mydata=result.datas;
-                for(var i=0;i<mydata.length;i++){
-                    var tempStr='<tr id='+mydata[i]._id+'>'+
-                                /*序号分页后也必须得变动,每页十条数据*/
-                            '<td>'+(i+1)+'、 <a href="/news_detail/'+mydata[i]._id+'" class="a_color">'+mydata[i].title+'</a><span class="pull-right">'+mydata[i].time+'</span></td>'+
-                            '</tr>'
-                    tabContent=tabContent+tempStr;
-                }
-                //将拼接好的数据填入#tabContent中
-                $("#tabContent").html(tabContent);
-            });
-        };
-
-        //从后台获取数据函数，获取三条招聘信息
-        function getRecruits(){
-            $.get("web/get_recruits",function(result){
-                //拼接html内容
-                var tabContent="";
-                //获取后台json数据
-                var mydata=result.datas;
-                for(var i=0;i<mydata.length;i++){
-                    var tempStr='<tr id='+mydata[i]._id+'>'+
-                                /*序号分页后也必须得变动,每页十条数据*/
-                            '<td>'+(i+1)+'、职位：'+mydata[i].position+'<span class="pull-right">'+mydata[i].department+'</span></td>'+
-                            '</tr>'
-                    tabContent=tabContent+tempStr;
-                }
-                //将拼接好的数据填入#tabContent中
-                $("#tabContent_recruit").html(tabContent);
-            });
-        };
-    });
-
-
-</script>
+</body>
+</html>
