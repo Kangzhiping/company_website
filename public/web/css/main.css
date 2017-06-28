@@ -2578,13 +2578,15 @@ shortcodes page css
             z-index: 2;
         }
 
-        .header {
-            position: fixed;
-            width: 100%;
-            left: 0px;
-            z-index: 999;
-            background-color: #FF5809;
-            font-family: verdana;
-        }
+        logo {
+            float: left;
+            background-image:url(/web/firstpage/logo.gif);
+            display: inline-block;
+            width: 300px;
+            height:70px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 500px;
+        }  
 
 

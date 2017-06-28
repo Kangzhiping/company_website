@@ -8,30 +8,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>登录</title>
 		<link rel="stylesheet" href="/admin/plugins/layui/css/layui.css" media="all" />
+		<link href="/web/firstpage/index.min.css" rel="stylesheet">
 		<style type="text/css">
-			body{background: url(admin/images/rebc.gif);}
+			body{background: url(/web/firstpage/loginbackground.jpg);}
 		</style>
 
 
 	</head>
 
 	<body>
-	<div style="margin-top: 200px">
-		<div style="text-align: center;">
-			<a href="#">学门网</a>
-		</div>
-		<br>
+	<div class="header">
+        <div class="nav">
+            <div class="logo"></div>
+            <ul class="MainList">
+                <li class="MainListBtn" style="margin-left:60%; color:#FFFFFF">
+                    <a href="/first">首页</a>
+                </li>
 
-		<div style="margin-left: 30%;margin-right: 30%">
-		    <fieldset class="layui-elem-field">
-			<div class="layui-field-box" style="background-color: white;">
+                <li class="MainListBtn">
+                    <a href="/contact_us">联系我们</a>
+                </li>
+
+                <li class="MainListBtn" style="margin-left:30px">
+                    <a href="/company_intro">关于我们</a>
+                </li>
+            </ul>
+        </div> 
+    </div>
+	<div class="container">
+         <div class="wrap">
+            <div class="slogan"></div>
+       		<div style="margin-left: 60%;margin-right: 5%">
+			  <fieldset class="layui-elem-field">
+			  <div class="layui-field-box" style="background-color: rgba(255,255,255,.5);">
 				<div class="head">
 					<img src="admin/images/15.png" style="width: 30px;height: 30px;">
 					<span>用户登录</span>
 				</div>
 				<br>
-
-				<form class="layui-form" id="" name="loginForm" style="text-align: center">
+					<form class="layui-form" id="" name="loginForm" style="text-align: center">
 					<div class="layui-form-item">
 						<label class="layui-form-label">用户名</label>
 						<div class="layui-input-block">
@@ -63,16 +78,19 @@
 
 				</form>
 
-				<div style="text-align: right">
-					<a href="/register" style="margin-left: 40px">去注册</a>
+				<div style="text-align: right;">
+					<a href="/register">去注册</a>
 				</div>
+			  </div>
+		      </fieldset>
 			</div>
-		</fieldset>
-
-		</div>
-
-	</div>
-
+        </div>
+    </div>
+	<div class="footer">
+        <div class="ownership">
+            <span>Copyright &copy; 2017.版权所有：学门网 深ICP备88888888号</span>
+        </div>
+    </div>
 
 	<script type="text/javascript" src="/admin/plugins/layui/layui.js"></script>
 		<script>

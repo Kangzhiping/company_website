@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="/admin/plugins/layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="/admin/css/global.css" media="all">
+	<link rel="stylesheet" href="/admin/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/admin/css/table.css" />
+</head>
+
+<body>
+<div class="admin-main">
+
+	<fieldset class="layui-elem-field">
+		<legend>用户信息</legend>
+		<div class="layui-field-box">
+			<table class="site-table table-hover">
+				<thead>
+				<tr>
+					<th><label class="layui-form-label">用户名</label></th>
+					<th><input type="text" name="username" id="username" class="layui-input" readonly="true"></th>
+				</tr>
+				<tr>
+					<th><label class="layui-form-label">真实姓名</label></th>
+					<th><input type="text" name="realname" id="realname" class="layui-input"></th>
+				</tr>
+				<tr>
+					<th><label class="layui-form-label">电话</label></th>
+					<th><input type="number" name="phone" id="phone" class="layui-input"></th>
+				</tr>
+				<tr>
+					<th><label class="layui-form-label">邮箱</label></th>
+					<th><input type="email" name="email" id="email" class="layui-input"></th>
+				</tr>
+				</thead>
+			</table>
+		</div>
+	</fieldset>
+</div>
+<script type="text/javascript" src="/admin/plugins/layui/layui.js"></script>
+<script>
+	layui.config({
+		base: '/admin/plugins/layui/modules/'
+	});
+	layui.use(['icheck', 'laypage','layer'], function() {
+		var $ = layui.jquery,
+				laypage = layui.laypage,
+				layer = parent.layer === undefined ? layui.layer : parent.layer;
+
+		//页面初始化的时候执行
+		$(function (){
+			$.get("/admin/get_userinfor",function(result){
+				if(result.status==='success'){
+					var mydata=result.data;
+					$("#username").val(mydata.username);
+					$("#phone").val(mydata.phone);
+					$("#realname").val(mydata.realname);
+					//$("#email").val(mydata.email);
+				}
+				
+			});
+		});
+
+	});
+</script>
+</body>
+
+</html>

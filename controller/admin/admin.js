@@ -13,13 +13,18 @@ var Feedback=mongoose.model('Feedback');
 // 首页
 
 exports.admin = function(req, res) {
-    var isSuper='星级用户';
-    if (req.session.user.status==='1'){
-        isSuper='普通管理员';
-    } else if(req.session.user.status==='2'){
-        isSuper='超级管理员';
+	if (req.session.user.status==='0'){
+    	var isSuper='星级用户'; 
+    	res.render('website/user/user',{username:req.session.user.username,isSuper:isSuper});
+    } else {
+    	if (req.session.user.status==='1'){
+        	isSuper='普通管理员';
+        	res.render('admin/admin2',{username:req.session.user.username,isSuper:isSuper});
+    	} else if(req.session.user.status==='2'){
+        	isSuper='超级管理员';
+        	res.render('admin/admin',{username:req.session.user.username,isSuper:isSuper});
+    	}
     }
-    res.render('admin/index',{username:req.session.user.username,isSuper:isSuper});
 };
 // 添加新闻
 exports.add_news = function(req, res) {
@@ -500,5 +505,20 @@ exports.check_feedbacks = function(req, res) {
         }else{
             res.json({'status':'success','size':result.length});
         }
+    });
+};
+
+//返回客户信息
+exports.get_userinfor = function(req, res) {
+	var username=req.session.user.username;
+    User.findOne({username:username},function(err,result){
+        if(err){
+            res.json({'status':'error'});
+        }else if(result==null){
+            res.json({'status':'error'});
+        }else{
+            res.json({'status':'success', 'data': result});
+        }
+        console.log(result.phone);
     });
 };

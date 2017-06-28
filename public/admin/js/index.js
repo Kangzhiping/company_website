@@ -21,7 +21,7 @@ layui.config({
 	//设置navbar
 	navbar.set({
 		elem: '#admin-navbar-side',
-		data: navs2,
+		data: navs,
 		/*cached:true,
 		 url: 'datas/nav.json'*/
 	});
