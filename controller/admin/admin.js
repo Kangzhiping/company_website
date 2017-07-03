@@ -10,6 +10,27 @@ var Quit =mongoose.model('Quit');
 var User=mongoose.model('User');
 var Feedback=mongoose.model('Feedback');
 
+
+exports.check_user = function(req,res) {
+	if (req.session.user.status !='0'){
+    	var isSuper='星级用户'; 
+    	res.render('/register',{message:"您还不是星级用户，请您注册"});
+    }
+}
+
+exports.check_admin = function(req,res) {
+	if (req.session.user.status !='1'){
+        res.render('#',{message:"您还不是管理员，请您联系超级管理员"});
+    }
+}
+
+exports.check_superadmin = function(req,res) {
+	if (req.session.user.status !='2'){
+        res.render('#',{message:"您还不是超级管理员，无权限"});
+    }
+}
+
+
 // 首页
 
 exports.admin = function(req, res) {

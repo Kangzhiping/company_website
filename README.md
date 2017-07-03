@@ -18,12 +18,12 @@
 ![网站首页.jpg](./views/show_image1.jpg)
 ![网站首页.jpg](./views/show_image2.jpg)
 ![网站首页.jpg](./views/show_image3.jpg)
+![登录.jpg](./views/show_image4.jpg)
 
 **2、移动端显示：**   
 
 **3、后台管理系统：**  
 
-![登录.jpg](./views/show_image4.jpg)
 ![后台管理.jpg](./views/show_image5.jpg)
 
 
