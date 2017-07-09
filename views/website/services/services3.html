@@ -35,7 +35,24 @@
                         </p>
                         </h3>
                         <p>
-                            <%include ../professional_html/010103K.html%>
+                            <!--%include ../professional_html/010103K.html%-->
+                            
+                            <div class="layui-field-box">
+								<table class="site-table table-hover">
+									<thead>
+										<tr>
+										<th>序号</th>
+										<th>编号</th>
+										<th>专业类名称</th>
+										<th>备注</th>
+										</tr>
+									</thead>
+									<tbody id="tabContent">
+
+									</tbody>
+								</table>
+
+							</div>
                         </p>
                         <p style="text-indent:24pt;" align="center">
                             &nbsp;
@@ -47,16 +64,47 @@
         </div><!--/.container-->
     </section><!--/#feature-->
 
-
-
-
-
-
-
-
-
 <%include ../common/include_footer.html%>
 
+<script type="text/javascript" src="/web/layui/layui.js"></script>
 <script>
-    $("#my_services").addClass("active");
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'laypage','form'], function(){
+        var layer = layui.layer
+                ,laypage = layui.laypage
+                , $ = layui.jquery;
+
+        //页面初始化的时候执行
+        $(function (){
+        	alert("test01");
+            $("#my_services").addClass("active");
+            getData();
+        });
+
+        //从后台获取学科数据函数
+        function getData(){
+            $.get("/web/get_subjects",function(result){
+            	alert("test03");
+                //拼接html内容
+                var tabContent="";
+                
+                if (result.status != 'error') {
+                	//获取后台json数据
+                	var mydata=result.data;
+
+                	for(var i=0;i<mydata.length;i++){
+                    	var tempStr='<tr id='+mydata[i]._id+'>'+
+                    		'<td>'+(i+1)+'</td>'+
+							'<td>'+mydata[i].ID+'</td>'+
+                            '<td>'+'、 <a href="/web/get_class/'+mydata[i].Name+'" class="a_color">'+mydata[i].Name</td>'+
+                            '<td>'+mydata[i].Remark+'</td>'+
+                            '</tr>'
+                    	tabContent=tabContent+tempStr;
+               		}
+                }
+                //将拼接好的数据填入#tabContent中
+                $("#tabContent").html(tabContent);
+            });
+        };
+    });
 </script>

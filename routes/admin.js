@@ -63,5 +63,7 @@ module.exports = function(app) {
   app.get('/admin/check_feedbacks', Admin.check_feedbacks);
 
   app.get('/admin/get_userinfor', Admin.get_userinfor);
+  
+  
 
 };

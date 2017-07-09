@@ -540,6 +540,5 @@ exports.get_userinfor = function(req, res) {
         }else{
             res.json({'status':'success', 'data': result});
         }
-        console.log(result.phone);
     });
 };

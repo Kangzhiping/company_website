@@ -11,6 +11,47 @@ var Feedback=mongoose.model('Feedback');
 /*处理时间*/
 var Moment = require('moment');
 
+var Professional_master=mongoose.model('Professional_master');
+var Professioinal_class=mongoose.model('Professional_class');
+var University_professional_subject=mongoose.model('University_professional_subject');
+
+
+exports.get_subjects = function(req, res) {
+	University_professional_subject.find({},function(err,result){
+        if(err){
+            res.json({'status':'error'});
+        }else if(result==null){
+            res.json({'status':'error'});
+        }else{
+            res.json({'status':'success', 'data': result});
+        }
+    });
+};
+
+exports.get_class = function(req, res) {
+	Professioinal_class.find({},function(err,result){
+        if(err){
+            res.json({'status':'error'});
+        }else if(result==null){
+            res.json({'status':'error'});
+        }else{
+            res.json({'status':'success', 'data': result});
+        }
+    });
+};
+
+exports.get_professional = function(req, res) {
+	Professional_master.find({},function(err,result){
+        if(err){
+            res.json({'status':'error'});
+        }else if(result==null){
+            res.json({'status':'error'});
+        }else{
+            res.json({'status':'success', 'data': result});
+        }
+    });
+};
+
 // 首页
 exports.index = function(req, res) {
     res.render('website/index/index');
