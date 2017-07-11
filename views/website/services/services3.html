@@ -41,9 +41,9 @@
 								<table class="site-table table-hover">
 									<thead>
 										<tr>
-										<th>序号</th>
-										<th>专业类名称</th>
-										<th>备注</th>
+										<th>&nbsp序号&nbsp</th>
+										<th>&nbsp&nbsp&nbsp专业类名称&nbsp&nbsp&nbsp</th>
+										<th>&nbsp备注&nbsp</th>
 										</tr>
 									</thead>
 									<tbody id="tabContent">
@@ -87,14 +87,15 @@
                 if (result.status != 'error') {
                 	//获取后台json数据
                 	var mydata=result.data;
-                	alert("test01");
 
                 	for(var i=0; i< mydata.length;i++){
                     	var tempStr='<tr>'+
-                    		'<td>'+ mydata[i].ID +'</td>'+
-							'<td>'+'<a href="/web/get_class/'+mydata[i].Name+'" class="a_color">'+mydata[i].Name+'</td>'+
-                            '<td>'+mydata[i].Remark+'</td>'+
-                            '</tr>';
+                    		'<td>'+ '&nbsp' + mydata[i].ID + '&nbsp' +'</td>'+
+							'<td>'+'<a href="/web/get_class/'+mydata[i].Name +
+							'" class="a_color">'+ '&nbsp&nbsp&nbsp' + mydata[i].Name+
+							'&nbsp&nbsp&nbsp' + '</td>' + 
+                            '<td>' + '&nbsp' + mydata[i].Remark + '&nbsp' + '</td>'+
+                     		'</tr>';
                     	tabContent=tabContent+tempStr;
                		}
                 }
