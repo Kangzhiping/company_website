@@ -42,7 +42,6 @@
 									<thead>
 										<tr>
 										<th>序号</th>
-										<th>编号</th>
 										<th>专业类名称</th>
 										<th>备注</th>
 										</tr>
@@ -66,7 +65,7 @@
 
 <%include ../common/include_footer.html%>
 
-<script type="text/javascript" src="/web/layui/layui.js"></script>
+<script type="text/javascript" src="web/layui/layui.js"></script>
 <script>
     //一般直接写在一个js文件中
     layui.use(['layer', 'laypage','form'], function(){
@@ -76,29 +75,26 @@
 
         //页面初始化的时候执行
         $(function (){
-        	alert("test01");
             $("#my_services").addClass("active");
             getData();
         });
 
-        //从后台获取学科数据函数
+        //从后台获取数据函数，获取页数curr的数据
         function getData(){
             $.get("/web/get_subjects",function(result){
-            	alert("test03");
-                //拼接html内容
-                var tabContent="";
+            	var tabContent="";
                 
                 if (result.status != 'error') {
                 	//获取后台json数据
                 	var mydata=result.data;
+                	alert("test01");
 
-                	for(var i=0;i<mydata.length;i++){
-                    	var tempStr='<tr id='+mydata[i]._id+'>'+
-                    		'<td>'+(i+1)+'</td>'+
-							'<td>'+mydata[i].ID+'</td>'+
-                            '<td>'+'、 <a href="/web/get_class/'+mydata[i].Name+'" class="a_color">'+mydata[i].Name</td>'+
+                	for(var i=0; i< mydata.length;i++){
+                    	var tempStr='<tr>'+
+                    		'<td>'+ mydata[i].ID +'</td>'+
+							'<td>'+'<a href="/web/get_class/'+mydata[i].Name+'" class="a_color">'+mydata[i].Name+'</td>'+
                             '<td>'+mydata[i].Remark+'</td>'+
-                            '</tr>'
+                            '</tr>';
                     	tabContent=tabContent+tempStr;
                		}
                 }
@@ -107,4 +103,6 @@
             });
         };
     });
+
+
 </script>

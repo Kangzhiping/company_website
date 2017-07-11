@@ -17,6 +17,7 @@ var University_professional_subject=mongoose.model('University_professional_subj
 
 
 exports.get_subjects = function(req, res) {
+	
 	University_professional_subject.find({},function(err,result){
         if(err){
             res.json({'status':'error'});
