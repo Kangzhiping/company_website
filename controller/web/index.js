@@ -30,13 +30,15 @@ exports.get_subjects = function(req, res) {
 };
 
 exports.get_class = function(req, res) {
-	Professioinal_class.find({},function(err,result){
+	var subject=req.params.subject;
+	console.log(subject);
+	Professioinal_class.find({'Class_subject_name':subject},function(err,result){
         if(err){
-            res.json({'status':'error'});
+        	res.render('website/services/services31',{status:'error'});
         }else if(result==null){
-            res.json({'status':'error'});
+        	res.render('website/services/services31',{status:'error'});
         }else{
-            res.json({'status':'success', 'data': result});
+        	res.render('website/services/services31',{status:'succ', subject: subject, result:result});
         }
     });
 };
