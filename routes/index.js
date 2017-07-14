@@ -68,11 +68,5 @@ module.exports = function(app) {
 
   //�û���ӷ�����Ϣ
   app.post('/post_feedback', Index.post_feedback);
-  
-  app.get('/web/get_subjects', Index.get_subjects);
-  
-  app.get('/web/get_class/:subject', Index.get_class);	
-    
-  app.get('/web/get_professional/:id', Index.get_professional);
 
 };

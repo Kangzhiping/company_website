@@ -9,7 +9,11 @@ var Recruit =mongoose.model('Recruit');
 var Quit =mongoose.model('Quit');
 var User=mongoose.model('User');
 var Feedback=mongoose.model('Feedback');
+var MyMajor = mongoose.model('myMajor');
+var MyChar= mongoose.model('myChar');
 
+
+var DateFormat = require('../../Common/DateStr');
 
 exports.check_user = function(req,res) {
 	if (req.session.user.status !='0'){
@@ -29,7 +33,6 @@ exports.check_superadmin = function(req,res) {
         res.render('#',{message:"您还不是超级管理员，无权限"});
     }
 }
-
 
 // 首页
 
@@ -278,7 +281,6 @@ exports.checkUser = function(req, res) {
     var username=req.body.username;
     var password=req.body.password;
     var captcha=req.body.captcha.toLowerCase();
-
     if(captcha!=req.session.captcha){
         console.log('captcha error');
         res.json({'status':'captcha error'});
@@ -541,4 +543,66 @@ exports.get_userinfor = function(req, res) {
             res.json({'status':'success', 'data': result});
         }
     });
+};
+
+//根据客户用户名查询对应推荐专业
+//Evan 2017-07-04
+exports.req_major = function(req,res){
+    var name = req.session.user.username;
+
+    MyMajor.find({username:name},function(err,result){
+        if(null != err || null == result) {
+            res.json({'status': 'error'});
+        }
+        else {
+            res.json({'status': 'success', 'data': result});
+            console.log(result);
+            for(var i =0;i<result[0]['t_res'].length;i++)
+                console.log(result[0]['t_res'][i]);
+        }
+    });
+};
+
+//根据客户用户名查询测试性格结果
+exports.req_char = function(req,res){
+    var user = req.session.user.username;
+    MyChar.findOne({username:user},function(err,result){
+        if(null != err||null == result){
+            res.json({'status':'error'});
+        }
+        else{
+            res.json({'status':'success','data':result});
+            console.log(result);
+        }
+    });
+    // var Char = new MyChar({
+    //     username:'Evan',
+    //     t_res:[{
+    //         date:'2016-09-08 11:33:32',
+    //         dimen1:'I',
+    //         dimen2:'S',
+    //         dimen3:'T',
+    //         dimen4:'J',
+    //         res:'检查员型'
+    //     },{
+    //         date:'2016-11-08 11:33:32',
+    //         dimen1:'E',
+    //         dimen2:'S',
+    //         dimen3:'T',
+    //         dimen4:'J',
+    //         res:'大男人型'
+    //     },{
+    //
+    //         date:DateFormat('yyyy-MM-dd HH:mm:ss'),
+    //         dimen1:'I',
+    //         dimen2:'N',
+    //         dimen3:'T',
+    //         dimen4:'J',
+    //         res:'专家型'
+    //     }]
+    // });
+    // MyChar.create(Char,function(err,result){
+    //     console.log(err+":"+result);
+    // });
+
 };
