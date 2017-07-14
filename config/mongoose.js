@@ -11,6 +11,8 @@ module.exports=function(){
     require('../model/recruit.js');
     require('../model/quit.js');
     require('../model/feedback.js');
+    require('../model/myMajor.js');
+    require('../model/myChar.js');
     require('../model/professional_master.js');
     require('../model/professional_class.js');
     require('../model/university_professional_subject.js');

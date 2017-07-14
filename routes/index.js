@@ -72,7 +72,7 @@ module.exports = function(app) {
   app.get('/web/get_subjects', Index.get_subjects);
   
   app.get('/web/get_class/:subject', Index.get_class);	
-    
+  
   app.get('/web/get_professional/:id', Index.get_professional);
 
 };
