@@ -73,6 +73,6 @@ module.exports = function(app) {
   
   app.get('/web/get_class/:subject', Index.get_class);	
   
-  app.get('/web/get_professional/:id', Index.get_professional);
+  app.get('/web/get_major/:id', Index.get_major);
 
 };

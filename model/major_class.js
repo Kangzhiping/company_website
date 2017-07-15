@@ -4,11 +4,11 @@
  */
 var mongoose=require('mongoose');
 
-var professional_classschema=new mongoose.Schema({
+var major_classschema=new mongoose.Schema({
     ID:Number,
     Name:String,
     Class_subject_name:String,
     Remark:String
 });
 
-mongoose.model('Professional_class',professional_classschema);
+mongoose.model('Major_class',major_classschema);

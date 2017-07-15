@@ -29,6 +29,7 @@
                         <h3 class="ab_right_title font_size_12" >
                         <span >您的位置：<a href="/first" class="a_little_tip">首页</a> > <a href="/services1" class="a_little_tip">服务中心</a> >
                         	<a href="/services3" class="a_little_tip">专业介绍</a> > <a href="#" class="a_little_tip">专业类介绍</a>
+                        	> <%=subject%>
                         </span>
 
                         <p style="text-indent:24pt;" align="center">
@@ -36,19 +37,27 @@
                         </p>
                         </h3>
                         <p>
-                            <!--%include ../professional_html/010103K.html%-->
-                            
                             <div class="layui-field-box">
-								<table class="site-table table-hover">
+								<table class="layui-table" lay-even lay-skin="nob">
 									<thead>
 										<tr>
-										<th>&nbsp序号&nbsp</th>
-										<th>&nbsp&nbsp&nbsp专业类名称&nbsp&nbsp&nbsp</th>
-										<th>&nbsp备注&nbsp</th>
+										<th>序号</th>
+										<th>专业类名称</th>
+										<th>专业学科名称</th>
+										<th>备注</th>
 										</tr>
 									</thead>
 									<tbody id="tabContent">
-
+				
+                					<%for (var v in result) { %>
+                    					<tr>
+                    						<td><%=result[v].ID%></td>
+											<td><a href="/web/get_major/<%=result[v].Name%>" class="layui-btn layui-btn-radius layui-btn-warm">
+												<%=result[v].Name%></td>  
+											<td><%=result[v].Class_subject_name%></td>
+                            				<td><%=result[v].Remark%></td>
+                     					</tr>
+               						<% } %> 
 									</tbody>
 								</table>
 
@@ -66,45 +75,6 @@
 
 <%include ../common/include_footer.html%>
 
-<script type="text/javascript" src="web/layui/layui.js"></script>
 <script>
-    //一般直接写在一个js文件中
-    layui.use(['layer', 'laypage','form'], function(){
-        var layer = layui.layer
-                ,laypage = layui.laypage
-                , $ = layui.jquery;
-
-        //页面初始化的时候执行
-        $(function (){
-            $("#my_services").addClass("active");
-            getData();
-        });
-
-        //从后台获取数据函数，获取页数curr的数据
-        function getData(){
-            $.get("/web/get_subjects",function(result){
-            	var tabContent="";
-                
-                if (result.status != 'error') {
-                	//获取后台json数据
-                	var mydata=result.data;
-
-                	for(var i=0; i< mydata.length;i++){
-                    	var tempStr='<tr>'+
-                    		'<td>'+ '&nbsp' + mydata[i].ID + '&nbsp' +'</td>'+
-							'<td>'+'<a href="/web/get_class/'+mydata[i].Name +
-							'" class="a_color">'+ '&nbsp&nbsp&nbsp' + mydata[i].Name+
-							'&nbsp&nbsp&nbsp' + '</td>' + 
-                            '<td>' + '&nbsp' + mydata[i].Remark + '&nbsp' + '</td>'+
-                     		'</tr>';
-                    	tabContent=tabContent+tempStr;
-               		}
-                }
-                //将拼接好的数据填入#tabContent中
-                $("#tabContent").html(tabContent);
-            });
-        };
-    });
-
-
+    $("#my_services").addClass("active");
 </script>

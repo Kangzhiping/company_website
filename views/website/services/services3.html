@@ -36,15 +36,13 @@
                         </p>
                         </h3>
                         <p>
-                            <!--%include ../professional_html/010103K.html%-->
-                            
                             <div class="layui-field-box">
-								<table class="site-table table-hover">
+								<table class="layui-table" lay-even lay-skin="nob">
 									<thead>
 										<tr>
-										<th>&nbsp序号&nbsp</th>
-										<th>&nbsp&nbsp&nbsp专业类名称&nbsp&nbsp&nbsp</th>
-										<th>&nbsp备注&nbsp</th>
+										<th>序号</th>
+										<th>专业学科名称</th>
+										<th>备注</th>
 										</tr>
 									</thead>
 									<tbody id="tabContent">
@@ -91,11 +89,10 @@
 
                 	for(var i=0; i< mydata.length;i++){
                     	var tempStr='<tr>'+
-                    		'<td>'+ '&nbsp' + mydata[i].ID + '&nbsp' +'</td>'+
+                    		'<td>'+ mydata[i].ID + '</td>'+
 							'<td>'+'<a href="/web/get_class/'+mydata[i].Name +
-							'" class="a_color">'+ '&nbsp&nbsp&nbsp' + mydata[i].Name+
-							'&nbsp&nbsp&nbsp' + '</td>' + 
-                            '<td>' + '&nbsp' + mydata[i].Remark + '&nbsp' + '</td>'+
+							'" class="layui-btn layui-btn-normal">'+ mydata[i].Name + '</td>' + 
+                            '<td>' + mydata[i].Remark + '</td>'+
                      		'</tr>';
                     	tabContent=tabContent+tempStr;
                		}

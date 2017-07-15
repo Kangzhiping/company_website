@@ -4,10 +4,10 @@
  */
 var mongoose=require('mongoose');
 
-var university_professional_subjectschema=new mongoose.Schema({
+var university_major_subjectschema=new mongoose.Schema({
     ID:Number,
     Name:String,
     Remark:String
 });
 
-mongoose.model('University_professional_subject',university_professional_subjectschema);
+mongoose.model('University_major_subject',university_major_subjectschema);

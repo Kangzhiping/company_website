@@ -4,7 +4,7 @@
  */
 var mongoose=require('mongoose');
 
-var  professional_masterschema=new mongoose.Schema({
+var  major_masterschema=new mongoose.Schema({
     ID:String,
     Name:String,
     Class_name:String,
@@ -12,4 +12,4 @@ var  professional_masterschema=new mongoose.Schema({
     Remark:String
 });
 
-mongoose.model('Professional_master',professional_masterschema);
+mongoose.model('Major_master',major_masterschema);

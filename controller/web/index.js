@@ -11,29 +11,28 @@ var Feedback=mongoose.model('Feedback');
 /*处理时间*/
 var Moment = require('moment');
 
-var Professional_master=mongoose.model('Professional_master');
-var Professioinal_class=mongoose.model('Professional_class');
-var University_professional_subject=mongoose.model('University_professional_subject');
+var Major_master=mongoose.model('Major_master');
+var Major_class=mongoose.model('Major_class');
+var University_Major_subject=mongoose.model('University_major_subject');
 
 
 exports.get_subjects = function(req, res) {
 	
-	University_professional_subject.find({},function(err,result){
+	University_Major_subject.find({},function(err,result){
         if(err){
             res.json({'status':'error'});
         }else if(result==null){
             res.json({'status':'error'});
         }else{
-            res.json({'status':'success', 'data': result});
+            res.json({'status':'succ', 'data': result});
         }
     });
 };
 
 exports.get_class = function(req, res) {
 	var subject=req.params.subject;
-	console.log(subject);
-	Professioinal_class.find({'Class_subject_name':subject},function(err,result){
-        if(err){
+	Major_class.find({'Class_subject_name':subject},function(err,result){
+		if(err){
         	res.render('website/services/services31',{status:'error'});
         }else if(result==null){
         	res.render('website/services/services31',{status:'error'});
@@ -43,8 +42,8 @@ exports.get_class = function(req, res) {
     });
 };
 
-exports.get_professional = function(req, res) {
-	Professional_master.find({},function(err,result){
+exports.get_Major = function(req, res) {
+	Major_master.find({},function(err,result){
         if(err){
             res.json({'status':'error'});
         }else if(result==null){

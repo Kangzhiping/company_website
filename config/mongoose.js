@@ -13,8 +13,8 @@ module.exports=function(){
     require('../model/feedback.js');
     require('../model/myMajor.js');
     require('../model/myChar.js');
-    require('../model/professional_master.js');
-    require('../model/professional_class.js');
-    require('../model/university_professional_subject.js');
+    require('../model/major_master.js');
+    require('../model/major_class.js');
+    require('../model/university_major_subject.js');
     return db;
 }
