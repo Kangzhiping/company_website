@@ -44,7 +44,6 @@ exports.get_classes = function(req, res) {
 
 exports.get_majors = function(req, res) {
 	var _class=req.params._class;
-	console.log(_class);
 	Major_master.find({'Class_name':_class},function(err,result){
         if(err){
         	res.render('website/services/services32',{status:'error'});
@@ -56,10 +55,11 @@ exports.get_majors = function(req, res) {
     });
 };
 
-exports.get_major_detail = function(req, res) {
-	var major_id=req.params.major_id;
-	console.log(major);
-    res.render('website/services/services33',{major_id:major_id});
+exports.get_detail = function(req, res) {
+	console.log("test02");
+	//var major_id=req.params.major;
+	//console.log(major);
+    res.render('website/services/services33');
 };
 
 // 首页

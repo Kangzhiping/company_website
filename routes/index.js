@@ -69,12 +69,12 @@ module.exports = function(app) {
   //�û���ӷ�����Ϣ
   app.post('/post_feedback', Index.post_feedback);
   
+  app.get('/web/get_detail', Index.get_detail);
+  
   app.get('/web/get_subjects', Index.get_subjects);
   
   app.get('/web/get_classes/:subject', Index.get_classes);	
   
   app.get('/web/get_majors/:_class', Index.get_majors);
   
-  app.get('/web/get_major_detail/:major_id', Index.get_major_detail);
-
 };

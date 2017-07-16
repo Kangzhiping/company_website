@@ -64,7 +64,6 @@ module.exports = function(app) {
 
   app.get('/admin/get_userinfor', Admin.get_userinfor);
 
-
   //Add By Evan 2017-07-04
   app.post('/admin/get_major',Admin.req_major);
   app.post('/admin/get_char',Admin.req_char);
