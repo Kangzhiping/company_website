@@ -56,6 +56,12 @@ exports.get_majors = function(req, res) {
     });
 };
 
+exports.get_major_detail = function(req, res) {
+	var major_id=req.params.major_id;
+	console.log(major);
+    res.render('website/services/services33',{major_id:major_id});
+};
+
 // 首页
 exports.index = function(req, res) {
     res.render('website/index/index');

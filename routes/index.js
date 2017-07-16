@@ -74,5 +74,7 @@ module.exports = function(app) {
   app.get('/web/get_classes/:subject', Index.get_classes);	
   
   app.get('/web/get_majors/:_class', Index.get_majors);
+  
+  app.get('/web/get_major_detail/:major_id', Index.get_major_detail);
 
 };

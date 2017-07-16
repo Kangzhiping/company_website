@@ -33,7 +33,7 @@
 								<table class="layui-table" lay-even lay-skin="nob">
 									<thead>
 										<tr>
-										<th>序号</th>
+										<th>编号</th>
 										<th>专业名称</th>
 										<th>专业类名称</th>
 										<th>专业学科名称</th>
@@ -45,7 +45,7 @@
                 					<%for (var v in result) { %>
                     					<tr>
                     						<td><%=result[v].ID%></td>
-											<td><a href="/web/get_major_detail/<%=result[v].Name%>" class="layui-btn layui-btn-radius layui-btn-warm">
+											<td><a href="/web/get_major_detail/<%=result[v].ID%>" class="layui-btn layui-btn-radius layui-btn-warm">
 												<%=result[v].Name%></td>  
 											<td><%=result[v].Class_name%></td>
 											<td><%=result[v].Class_subject_name%></td>
