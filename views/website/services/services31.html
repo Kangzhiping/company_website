@@ -6,20 +6,11 @@
         <div class="container">
             <div class="row">
                 <div class="features">
-
-
                     <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
-
-
-
                         <table class="table table-hover table-bordered" style="margin-right: 50px;margin-left: 10px;text-align:center">
                             <%include include_menu.html%>
                         </table>
-
-
-
                     </div><!--/.col-md-4-->
-
                     <div class="col-md-9 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
 
                         <div class="left wow fadeInDown">
@@ -28,7 +19,7 @@
 
                         <h3 class="ab_right_title font_size_12" >
                         <span >您的位置：<a href="/first" class="a_little_tip">首页</a> > <a href="/services1" class="a_little_tip">服务中心</a> >
-                        	<a href="/services3" class="a_little_tip">专业介绍</a> > <a href="#" class="a_little_tip">专业类介绍</a>
+                        	<a href="/services3" class="a_little_tip">专业介绍</a> > <a href="#" class="a_little_tip">专业学科</a>
                         	> <%=subject%>
                         </span>
 
@@ -52,7 +43,7 @@
                 					<%for (var v in result) { %>
                     					<tr>
                     						<td><%=result[v].ID%></td>
-											<td><a href="/web/get_major/<%=result[v].Name%>" class="layui-btn layui-btn-radius layui-btn-warm">
+											<td><a href="/web/get_majors/<%=result[v].Name%>" class="layui-btn layui-btn-radius layui-btn-warm">
 												<%=result[v].Name%></td>  
 											<td><%=result[v].Class_subject_name%></td>
                             				<td><%=result[v].Remark%></td>

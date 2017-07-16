@@ -29,7 +29,7 @@ exports.get_subjects = function(req, res) {
     });
 };
 
-exports.get_class = function(req, res) {
+exports.get_classes = function(req, res) {
 	var subject=req.params.subject;
 	Major_class.find({'Class_subject_name':subject},function(err,result){
 		if(err){
@@ -42,14 +42,16 @@ exports.get_class = function(req, res) {
     });
 };
 
-exports.get_Major = function(req, res) {
-	Major_master.find({},function(err,result){
+exports.get_majors = function(req, res) {
+	var _class=req.params._class;
+	console.log(_class);
+	Major_master.find({'Class_name':_class},function(err,result){
         if(err){
-            res.json({'status':'error'});
+        	res.render('website/services/services32',{status:'error'});
         }else if(result==null){
-            res.json({'status':'error'});
+        	res.render('website/services/services32',{status:'error'});
         }else{
-            res.json({'status':'success', 'data': result});
+        	res.render('website/services/services32',{status:'succ', _class: _class, result:result});
         }
     });
 };

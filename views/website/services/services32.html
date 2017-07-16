@@ -6,32 +6,24 @@
         <div class="container">
             <div class="row">
                 <div class="features">
-
-
                     <div class="col-md-3 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
-
-
-
                         <table class="table table-hover table-bordered" style="margin-right: 50px;margin-left: 10px;text-align:center">
                             <%include include_menu.html%>
                         </table>
-
-
-
                     </div><!--/.col-md-4-->
-
                     <div class="col-md-9 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
 
                         <div class="left wow fadeInDown">
-                            <span style="font-size: large;">涓撲笟绫讳粙缁�</span>
+                            <span style="font-size: large;">专业类介绍</span>
                         </div>
 
                         <h3 class="ab_right_title font_size_12" >
-                        <span >鎮ㄧ殑浣嶇疆锛�<a href="/first" class="a_little_tip">棣栭〉</a> > <a href="/services1" class="a_little_tip">鏈嶅姟涓績</a> >
-                        	<a href="/services3" class="a_little_tip">涓撲笟浠嬬粛</a> > <a href="#" class="a_little_tip">涓撲笟绫讳粙缁�</a>
-                        	> <%=subject%>
+                        <span >您的位置：<a href="/first" class="a_little_tip">首页</a> > <a href="/services1" class="a_little_tip">服务中心</a> >
+                        	<a href="/services3" class="a_little_tip">专业介绍</a> > <a href="/services31" class="a_little_tip">专业学科</a>
+                        	> <a href="#" class="a_little_tip">专业类</a>
+                        	> <%=_class%>
                         </span>
-
+	
                         <p style="text-indent:24pt;" align="center">
                             &nbsp;
                         </p>
@@ -41,10 +33,11 @@
 								<table class="layui-table" lay-even lay-skin="nob">
 									<thead>
 										<tr>
-										<th>搴忓彿</th>
-										<th>涓撲笟绫诲悕绉�</th>
-										<th>涓撲笟瀛︾鍚嶇О</th>
-										<th>澶囨敞</th>
+										<th>序号</th>
+										<th>专业名称</th>
+										<th>专业类名称</th>
+										<th>专业学科名称</th>
+										<th>备注</th>
 										</tr>
 									</thead>
 									<tbody id="tabContent">
@@ -52,8 +45,9 @@
                 					<%for (var v in result) { %>
                     					<tr>
                     						<td><%=result[v].ID%></td>
-											<td><a href="/web/get_major/<%=result[v].Name%>" class="layui-btn layui-btn-radius layui-btn-warm">
+											<td><a href="/web/get_major_detail/<%=result[v].Name%>" class="layui-btn layui-btn-radius layui-btn-warm">
 												<%=result[v].Name%></td>  
+											<td><%=result[v].Class_name%></td>
 											<td><%=result[v].Class_subject_name%></td>
                             				<td><%=result[v].Remark%></td>
                      					</tr>
