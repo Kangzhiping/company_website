@@ -56,7 +56,6 @@ exports.get_majors = function(req, res) {
 };
 
 exports.get_detail = function(req, res) {
-	//var major="include ../major_html/" + req.params.major + ".html";
     var major = req.params.major;
 	res.render('website/services/services33',{major:major});
 };
