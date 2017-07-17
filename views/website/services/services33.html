@@ -2,6 +2,11 @@
 
 <%include include_head_img.html%>
 
+    <link rel="stylesheet" type="text/css" href="/user/css/wiki-lemma_9ef7897.css"/>
+    <link rel="stylesheet" type="text/css" href="/user/css/wiki-common-base_1f825d9.css"/>
+    <link rel="stylesheet" type="text/css" href="/user/css/wiki-lemma-module_9106039.css"/>
+    <link rel="stylesheet" type="text/css" href="/user/css/mainContent_98e3702.css"/>
+
     <section id="feature" >
         <div class="container">
             <div class="row">
@@ -10,40 +15,42 @@
                         <table class="table table-hover table-bordered" style="margin-right: 50px;margin-left: 10px;text-align:center">
                             <%include include_menu.html%>
                         </table>
+
                     </div><!--/.col-md-4-->
+
                     <div class="col-md-9 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
 
                         <div class="left wow fadeInDown">
-                            <span style="font-size: large;">专业介绍</span>
+                            <span style="font-size: large;">专业推荐</span>
                         </div>
-
                         <h3 class="ab_right_title font_size_12" >
                         <span >您的位置：<a href="/first" class="a_little_tip">首页</a> > <a href="/services1" class="a_little_tip">服务中心</a> >
                         	<a href="/services3" class="a_little_tip">专业介绍</a> > <a href="/services31" class="a_little_tip">专业学科</a>
                         	> <a href="/services31" class="a_little_tip">专业类</a>
                         	> <a href="/#" class="a_little_tip">专业名称</a>
-                        	> <%=major_id%>
                         </span>
-	
                         <p style="text-indent:24pt;" align="center">
                             &nbsp;
                         </p>
                         </h3>
-                        <p>
-                        	<%include 120101.html%>
+                        <p id="MajorContent">
+                        
                         </p>
                         <p style="text-indent:24pt;" align="center">
                             &nbsp;
                         </p>
-                        
-                    </div><!--/.col-md-4-->
+                    </div>
                 </div><!--/.services-->
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#feature-->
 
+
 <%include ../common/include_footer.html%>
 
 <script>
     $("#my_services").addClass("active");
+    
+    $("#MajorContent").load("/major_html/<%=major%>.html");
+    
 </script>

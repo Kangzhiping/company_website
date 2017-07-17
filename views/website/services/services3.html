@@ -64,13 +64,13 @@
 
 <%include ../common/include_footer.html%>
 
-<script type="text/javascript" src="web/layui/layui.js"></script>
+<!--script type="text/javascript" src="web/layui/layui.js"></script-->
 <script>
     //一般直接写在一个js文件中
-    layui.use(['layer', 'laypage','form'], function(){
-        var layer = layui.layer
-                ,laypage = layui.laypage
-                , $ = layui.jquery;
+    //layui.use(['layer', 'laypage','form'], function(){
+      //  var layer = layui.layer
+        //        ,laypage = layui.laypage
+          //      , $ = layui.jquery;
 
         //页面初始化的时候执行
         $(function (){
@@ -101,7 +101,7 @@
                 $("#tabContent").html(tabContent);
             });
         };
-    });
+   // });
 
 
 </script>

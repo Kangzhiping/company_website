@@ -56,10 +56,9 @@ exports.get_majors = function(req, res) {
 };
 
 exports.get_detail = function(req, res) {
-	console.log("test02");
-	//var major_id=req.params.major;
-	//console.log(major);
-    res.render('website/services/services33');
+	//var major="include ../major_html/" + req.params.major + ".html";
+    var major = req.params.major;
+	res.render('website/services/services33',{major:major});
 };
 
 // 首页

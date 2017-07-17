@@ -69,7 +69,7 @@ module.exports = function(app) {
   //�û���ӷ�����Ϣ
   app.post('/post_feedback', Index.post_feedback);
   
-  app.get('/web/get_detail', Index.get_detail);
+  app.get('/web/get_detail/:major', Index.get_detail);
   
   app.get('/web/get_subjects', Index.get_subjects);
   
