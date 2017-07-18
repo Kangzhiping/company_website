@@ -18,15 +18,16 @@
         .header {
             position: fixed;
             width: 100%;
-            top: 20px;
+            height: 80px;
+            top: 5%;
             left: 0px;
             z-index: 999;
         }
 
         .nav {
             width: 80%;
-            height: 70px;
-            line-height: 50px;
+            height: 100%;
+            #line-height: 50px;
             margin: 0 auto 0;
         }
 
@@ -35,37 +36,41 @@
             float: left;
             background-image:url(/web/firstpage/logo.gif);
             display: inline-block;
-            width: 300px;
-            height:70px;
+            #width: 300px;
+            #height:70px;
+            width: 15%;
+            height:100%;
             background-position: 0 0;
             background-repeat: no-repeat;
             background-size: 500px;
         }       
 
         .MainList{
-            display: block;
-            width: 600px;
-            height: 50%;
+            display: inline-block;
+            width: 55%;
+            height: 100%;
             margin: auto;
-            float: left;
+            float: center;
         } 
 
         .MainListBtn{
             margin: 0;
-            width: 65px;
-            height: 30px;
-            float: left;
+            width: 20%;
+            height: 100%;
+            float: right;
             font-size: 15px;
             color: #FF0;
             list-style: none;
 
         } 
+        
 
         .entry {
+        	display: inline-block;
             float: right;
             color: #fff;
-            width: 200px;
-            height: 40px;
+            width: 25%;
+            height: 100%;
         }
 
         .entry .state {
@@ -85,8 +90,8 @@
         .btn_form {
         	float: right;
             color: #fff;
-            width: 100px;
-            height: 36px;
+            width: 40%;
+            height: 100%;
         }
 
         .container {

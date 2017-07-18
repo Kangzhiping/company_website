@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/user/css/wiki-lemma-module_9106039.css"/>
     <link rel="stylesheet" type="text/css" href="/user/css/mainContent_98e3702.css"/>
 
-    <section id="feature" >
+    <section id="feature">
         <div class="container">
             <div class="row">
                 <div class="features">
@@ -24,20 +24,25 @@
                             <span style="font-size: large;">专业推荐</span>
                         </div>
                         <h3 class="ab_right_title font_size_12" >
-                        <span >您的位置：<a href="/first" class="a_little_tip">首页</a> > <a href="/services1" class="a_little_tip">服务中心</a> >
+                        <span >您的位置：<a href="/first" class="a_little_tip" name="top">首页</a> > <a href="/services1" class="a_little_tip">服务中心</a> >
                         	<a href="/services3" class="a_little_tip">专业介绍</a> > <a href="#" class="a_little_tip">专业学科</a>
                         	> <a href="#" class="a_little_tip">专业类</a>
                         	> <a href="#" class="a_little_tip">专业名称</a>
                         </span>
-                        <p style="text-indent:24pt;" align="center">
-                            &nbsp;
+                        <p style="text-indent:24pt;" align="right">
+                            <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回上一页"
+                            class="layui-btn layui-btn-radius layui-btn-warm">
                         </p>
                         </h3>
                         <p id="MajorContent">
                         
                         </p>
-                        <p style="text-indent:24pt;" align="center">
-                            &nbsp;
+                        <p style="text-indent:24pt;" align="right">
+                        	<!-- a href="#top" align="centre" class="layui-btn layui-btn-radius layui-btn-warm">返回顶部</a> -->
+                            <input type="button"  name="Submit" onclick="javascript:window.scrollTo(0,100);" value="返回顶部"
+                            class="layui-btn layui-btn-radius layui-btn-warm">
+                            <input type="button"  name="Submit" onclick="javascript:history.back(-1);" value="返回上一页"
+                            class="layui-btn layui-btn-radius layui-btn-warm">
                         </p>
                     </div>
                 </div><!--/.services-->
@@ -52,5 +57,5 @@
     $("#my_services").addClass("active");
     
     $("#MajorContent").load("/major_html/<%=major%>.html");
-    
+
 </script>
